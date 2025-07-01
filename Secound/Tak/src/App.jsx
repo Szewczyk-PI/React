@@ -1,9 +1,15 @@
 import Entry from './components/Entry';
 import Navbar from './components/Navbar';
+import jokesData from './components/jokesData';
+import Test from './components/Test';
 export default function () {
+	const jokesElements = jokesData.map((joke) => {
+		return <Test setup={joke.setup} punchline={joke.punchline} />;
+	});
 	return (
 		<>
 			<Navbar />
+			{jokesElements}
 			<Entry
 				img={{
 					src: 'https://scrimba.com/links/travel-journal-japan-image-url',
