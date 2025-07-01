@@ -4,9 +4,19 @@ import Test from './components/Test';
 export default function () {
 	return (
 		<>
-			<Navbar />
-			<Entry />
-			<Test punchline="It's hard to explain puns to kleptomaniacs because they always take things literally." />
+			{/*<Navbar /> */}
+			{/*<Entry />*/}
+			<Test
+				punchline="It's hard to explain puns to kleptomaniacs because they always take things literally."
+				upvotes={10}
+				isPun={true}
+				comments={[
+					{
+						author: '',
+						comment: '',
+					},
+				]}
+			/>
 			<Test
 				setup='How did the hacker escape the police?'
 				punchline='He just ransomware!'
