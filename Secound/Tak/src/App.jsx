@@ -6,29 +6,22 @@ export default function () {
 		<>
 			<Navbar />
 			<Entry />
+			<Test punchline="It's hard to explain puns to kleptomaniacs because they always take things literally." />
 			<Test
-				img='./images/mr-whiskerson.png'
-				name='Mr. Whiskerson'
-				phone='(212) 555-1234'
-				email='mr.whiskaz@catnap.meow'
+				setup='How did the hacker escape the police?'
+				punchline='He just ransomware!'
 			/>
 			<Test
-				img='./images/fluffykins.png'
-				name='Fluffykins'
-				phone='(212) 555-2345'
-				email='fluff@me.com'
+				setup="Why don't pirates travel on mountain roads?"
+				punchline='Scurvy.'
 			/>
 			<Test
-				img='./images/felix.png'
-				name='Felix'
-				phone='(212) 555-4567'
-				email='thecat@hotmail.com'
+				setup='Why do bees stay in the hive in the winter?'
+				punchline='Swarm.'
 			/>
 			<Test
-				img='./images/pumpkin.png'
-				name='Pumpkin'
-				phone='(0800) CAT KING'
-				email='pumpkin@scrimba.com'
+				setup="What's the best thing about Switzerland?"
+				punchline="I don't know, but the flag is a big plus!"
 			/>
 		</>
 	);
