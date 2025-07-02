@@ -5,19 +5,7 @@ import Test from './components/Test';
 import data from './components/data';
 export default function () {
 	const dataEntry = data.map((dat) => {
-		return (
-			<Entry
-				img={{
-					src: dat.img.src,
-					alt: dat.img.alt,
-				}}
-				title={dat.title}
-				country={dat.country}
-				googleMapsLink={dat.googleMapsLink}
-				dates={dat.dates}
-				text={dat.text}
-			/>
-		);
+		return <Entry key={dat.id} {...dat} />;
 	});
 
 	return (
