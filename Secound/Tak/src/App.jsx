@@ -1,7 +1,5 @@
 import Entry from './components/Entry';
 import Navbar from './components/Navbar';
-import jokesData from './components/jokesData';
-import Test from './components/Test';
 import data from './components/data';
 export default function () {
 	const dataEntry = data.map((dat) => {
