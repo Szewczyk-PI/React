@@ -4,10 +4,10 @@ function Test() {
 	let [op, setOp] = useState(0);
 
 	function handlePlus() {
-		setOp(op + 1);
+		setOp((prevOp) => prevOp + 1);
 	}
 	function handleMinus() {
-		setOp(op - 1);
+		setOp((prevOp) => prevOp - 1);
 	}
 
 	return (
