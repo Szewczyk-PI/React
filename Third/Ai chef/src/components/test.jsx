@@ -1,20 +1,35 @@
 import { useState } from 'react';
 
 function Test() {
-	let [result, setResult] = useState('Yes');
+	let [op, setOp] = useState(0);
 
-	console.log(result);
-
-	function handleClick() {
-		setResult('Hell Yes');
+	function handlePlus() {
+		setOp(op + 1);
+	}
+	function handleMinus() {
+		setOp(op - 1);
 	}
 
 	return (
 		<>
-			<h1 className='title'>Is state important to know?</h1>
-			<button onClick={handleClick} className='value'>
-				{result}
-			</button>
+			<h1>How many times will Bob say "state" in this section?</h1>
+			<div className='counter'>
+				<button
+					onClick={handleMinus}
+					className='minus'
+					aria-label='Decrease count'
+				>
+					–
+				</button>
+				<h2 className='count'>{op}</h2>
+				<button
+					onClick={handlePlus}
+					className='plus'
+					aria-label='Increase count'
+				>
+					+
+				</button>
+			</div>
 		</>
 	);
 }
