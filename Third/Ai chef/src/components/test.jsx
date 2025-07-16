@@ -2,19 +2,41 @@ import { useState } from 'react';
 import './test.css';
 
 function Test() {
-	let [isGoingOut, setIsGoingOutsetToggle] = useState(true);
-	function toggle() {
-		setIsGoingOutsetToggle(!isGoingOut);
-	}
+	/**
+	 * Challenge: Convert the code below to use an array
+	 * held in state instead of a local variable. Initialize
+	 * the state array as an empty array
+	 *
+	 * Don't worry about fixing `addFavoriteThing` quite yet.
+	 */
+	const [myFavoriteThings, setMyFavoriteThings] = useState([]);
+	const allFavoriteThings = [
+		'💦🌹',
+		'😺',
+		'💡🫖',
+		'🔥🧤',
+		'🟤🎁',
+		'🐴',
+		'🍎🥧',
+		'🚪🔔',
+		'🛷🔔',
+		'🥩🍝',
+	];
+	const thingsElements = myFavoriteThings.map((thing) => (
+		<p key={thing}>{thing}</p>
+	));
 
-	let changeSet = isGoingOut ? 'yes' : 'no';
+	function addFavoriteThing() {
+		setMyFavoriteThings((prevFavThings) => [
+			...prevFavThings,
+			allFavoriteThings[prevFavThings.length],
+		]);
+	}
 
 	return (
 		<main>
-			<h1 className='title'>Do I feel like going out tonight?</h1>
-			<button onClick={toggle} className='value'>
-				{changeSet}
-			</button>
+			<button onClick={addFavoriteThing}>Add item</button>
+			<section aria-live='polite'>{thingsElements}</section>
 		</main>
 	);
 }
