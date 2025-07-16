@@ -2,35 +2,20 @@ import { useState } from 'react';
 import './test.css';
 
 function Test() {
-	let [op, setOp] = useState(0);
+	let [isGoingOut, setIsGoingOutsetToggle] = useState(true);
+	function toggle() {
+		setIsGoingOutsetToggle(!isGoingOut);
+	}
 
-	function handlePlus() {
-		setOp((prevOp) => prevOp + 1);
-	}
-	function handleMinus() {
-		setOp((prevOp) => prevOp - 1);
-	}
+	let changeSet = isGoingOut ? 'yes' : 'no';
+
 	return (
-		<>
-			<h1>How many times will Bob say "state" in this section?</h1>
-			<div className='counter'>
-				<button
-					onClick={handleMinus}
-					className='minus'
-					aria-label='Decrease count'
-				>
-					–
-				</button>
-				<h2 className='count'>{op}</h2>
-				<button
-					onClick={handlePlus}
-					className='plus'
-					aria-label='Increase count'
-				>
-					+
-				</button>
-			</div>
-		</>
+		<main>
+			<h1 className='title'>Do I feel like going out tonight?</h1>
+			<button onClick={toggle} className='value'>
+				{changeSet}
+			</button>
+		</main>
 	);
 }
 
