@@ -4,8 +4,8 @@ import Test from './components/test';
 function App() {
 	return (
 		<>
-			<Header />
-			<Form />
+			{/* <Header /> */}
+			{/* <Form /> */}
 			<Test />
 		</>
 	);
