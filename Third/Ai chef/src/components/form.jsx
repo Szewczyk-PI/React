@@ -1,27 +1,31 @@
-function Form() {
-	const ingredients = ['Chicken', 'Oregano', 'Tomatoes'];
-	const listIng = ingredients.map((ing) => <li key={ing}>{ing}</li>);
+import React from 'react';
+
+export default function Main() {
+	const [ingredients, setIngredients] = React.useState([]);
+
+	const ingredientsListItems = ingredients.map((ingredient) => (
+		<li key={ingredient}>{ingredient}</li>
+	));
+
 	function handleSubmit(event) {
 		event.preventDefault();
 		const formData = new FormData(event.currentTarget);
 		const newIngredient = formData.get('ingredient');
-		ingredients.push(newIngredient);
-		console.log(ingredients);
+		setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
 	}
 
 	return (
 		<main>
 			<form onSubmit={handleSubmit} className='add-ingredient-form'>
 				<input
-					aria-label='Add ingredient'
+					type='text'
 					placeholder='e.g. oregano'
+					aria-label='Add ingredient'
 					name='ingredient'
 				/>
 				<button>Add ingredient</button>
 			</form>
-			<ul>{listIng}</ul>
+			<ul>{ingredientsListItems}</ul>
 		</main>
 	);
 }
-
-export default Form;
