@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './test.css';
+// import './test.css';
 export default function Test() {
 	function handleSubmit(formData) {
 		const email = formData.get('email');

@@ -4,9 +4,9 @@ import Test from './components/test';
 function App() {
 	return (
 		<>
-			{/* <Header /> */}
-			{/* <Form /> */}
-			<Test />
+			<Header />
+			<Form />
+			{/* <Test /> */}
 		</>
 	);
 }
