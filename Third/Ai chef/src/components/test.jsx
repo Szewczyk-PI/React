@@ -2,12 +2,13 @@ import React from 'react';
 
 export default function Test() {
 	function signUp(formData) {
-		const email = formData.get('email');
-		const password = formData.get('password');
-		const check = formData.get('employmentStatus');
-		const check2 = formData.getAll('dietaryRestrictions');
-		const favColor = formData.get('favColor');
-		console.log(favColor);
+		const data = Object.fromEntries(formData);
+		const dieta = formData.getAll('dietaryRestrictions');
+		const allData = {
+			...data,
+			dietaryRestrictions: dieta,
+		};
+		console.log(allData);
 	}
 
 	return (
