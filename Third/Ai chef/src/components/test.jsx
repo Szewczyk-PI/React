@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './test.css';
 
 export default function Test() {
 	function signUp(formData) {

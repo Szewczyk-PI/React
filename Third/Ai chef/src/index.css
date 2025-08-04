@@ -4,59 +4,61 @@
 
 body {
 	margin: 0;
-	font-family: Inter, sans-serif;
-	background-color: #fafaf8;
+	padding: 10px;
+	background-color: #2dd4bf;
+	color: #262626;
 }
-header {
+
+h1 {
+	text-align: center;
+}
+
+form {
+	padding-inline: 40px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 11px;
-	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
-		0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-	height: 110px;
-	background-color: white;
-}
-header > img {
-	height: 50px;
-}
-header > h1 {
-	font-weight: 600;
-	font-size: 32px;
-}
-main {
-	padding: 30px 30px 10px;
+	flex-direction: column;
 }
 
-.add-ingredient-form {
+label {
+	margin-bottom: 4px;
+}
+
+input[type='email'],
+input[type='password'] {
+	border-radius: 100px;
+	border: 1px solid #0d9488;
+	height: 2rem;
+	text-indent: 10px;
+	margin-bottom: 20px;
+}
+
+textarea {
+	margin-bottom: 20px;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	margin-right: 10px;
+}
+
+fieldset {
+	border: 1px solid #262626;
+	margin-bottom: 20px;
 	display: flex;
-	gap: 12px;
-	/* align-items: center; */
-	justify-content: center;
-	height: 38px;
-}
-.add-ingredient-form > input {
-	border-radius: 6px;
-	border: 1px solid #d1d5db;
-	padding: 9px 13px;
-	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-	flex-grow: 1;
-	min-width: 150px;
-	max-width: 400px;
+	flex-direction: column;
 }
 
-.add-ingredient-form > button {
-	font-family: Inter, sans-serif;
-	border-radius: 6px;
-	border: none;
-	background-color: #141413;
-	color: #fafaf8;
-	width: 150px;
-	font-size: 0.875rem;
-	font-weight: 500;
+button {
+	border-radius: 100px;
+	border: 1px solid #0d9488;
+	padding: 10px 30px;
+	cursor: pointer;
+	margin-top: 20px;
+	transition: all 0.1s ease-in-out;
 }
 
-.add-ingredient-form > button::before {
-	content: '+';
-	margin-right: 5px;
+button:hover {
+	background-color: #115e59;
+	border-color: #042f2e;
+	color: white;
 }
