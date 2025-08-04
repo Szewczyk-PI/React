@@ -8,7 +8,8 @@ export default function Test() {
 		const password = formData.get('password');
 		const check = formData.get('employmentStatus');
 		const check2 = formData.getAll('dietaryRestrictions');
-		console.log(check2);
+		const favColor = formData.get('favColor');
+		console.log(favColor);
 	}
 
 	return (
@@ -79,6 +80,15 @@ export default function Test() {
 						/>
 						Gluten-free
 					</label>
+					<label htmlFor='favColor'>What is yout favorite color?</label>
+					<select name='favColor' id='favColor' required>
+						<option value='' disabled>
+							Pick Color
+						</option>
+						<option value='Red'>Red</option>
+						<option value='Blue'>Blue</option>
+						<option value='Green'>Green</option>
+					</select>
 				</fieldset>
 
 				<button>Submit</button>
