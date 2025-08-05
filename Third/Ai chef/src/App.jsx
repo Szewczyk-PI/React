@@ -1,12 +1,9 @@
-import Form from './components/form';
-import Header from './components/header';
-function App() {
-	return (
-		<>
-			<Header />
-			<Form />
-		</>
-	);
-}
+import Joke from './components/joke';
+import jokesData from './components/jodeData';
 
-export default App;
+export default function App() {
+	const jokeElements = jokesData.map((joke) => {
+		return <Joke key={joke.id} setup={joke.setup} punchline={joke.punchline} />;
+	});
+	return <div>{jokeElements}</div>;
+}
